@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NN Contact Form</title>
+    <link rel="stylesheet" href="p4styles.css">
+    <script src="formvalidation.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div class="stage">
+            <header>
+                <div class="heroImageContainer FlexRow">
+                    <img class="heroImage center" src="images/heroImage.jpg " alt="heroImage">
+                    <div class="title">&nbsp;&nbsp;&nbsp;&nbsp;Neo Noodin <br> &nbsp;&nbsp;Initiative <br>Program</div>
+                    <div class="subTitle">ᓀᐅᓅᑎᓐ ᐃᑴ</div>
+                </div>
+                <div class="mainNavBar FlexRow JustifyCenter">
+                    <ul class="FlexRow">
+                        <li><a href="aboutfourwinds.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="index.html">Home Page</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            
+            <main>
+                <form id="co_form" class="co_form" action="index.html" method="get">
+                    <div class="FlexRow JustifyCenter">
+                        <p>Please fill out the following form to contact us</p>
+                    </div>
+                    <ol>
+                        <li>
+                            <div class="FlexRow bottomMargin">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" autofocus>
+                                <p class="co_formError" id="name_error">* Required field</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="FlexRow bottomMargin">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(xxx)-xxx-xxxx">
+                                <p class="co_formError" id="phone_error">* Required field</p>
+                                <p class="co_formError" id="phoneformat_error">
+                                    * Invalid phone number
+                                </p>
+                            </div>
+                        </li>
+                        <li> 
+                            <div class="FlexRow bottomMargin"> 
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="example@domain.ca" >
+                                <p class="co_formError" id="email_error">* Required field</p>
+							<p class="co_formError" id="emailformat_error">
+								* Invalid email address
+							</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="FlexRow">
+                                <label for="message">Message</label>
+                                <br>
+                                <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                                <p class="co_formError" id="message_error">* Required field</p>
+                            </div>
+                        </li>
+                    </ol>
+                    <div class="co_formButtons">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+
+                
+
+
+                 <div class="co_contactImage">
+                    <img src="images/feather.jpg" alt="feather">
+                 </div>
+            </main>
+
+            <!-- EDIT FOOTER  -->
+            <footer>
+                <div class="footerNavBar FlexRow JustifyCenter">
+                    <ul class="FlexRow">
+                        <li><a href="aboutfourwinds.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="index.html">Home Page</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

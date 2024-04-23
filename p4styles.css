@@ -1,0 +1,283 @@
+/*********************
+    
+    Project 4
+    Name: Brenton Wilson 0231906
+    Date: 2024-02-28
+    Description: Project 4 Design to Development
+
+**********************/
+
+@font-face {
+    font-family: "syllabicsFont";
+    src: url("https://www.syllabics.net/fonts/freefont-20120503/FreeSans.woff") format('woff');
+}
+  
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    min-height: 100%;
+    height: fit-content;
+    width: 100%;
+    font-size: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#root {
+    padding: 1rem;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fbf8ff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 80 80'%3E%3Cg fill='%23abeeff' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+/* #############################################################################
+######################### UTILITY CLASSES ######################################
+################################################################################ */
+.FlexRow {
+	display: flex;
+	flex-direction: row;
+}
+
+.FlexCol {
+	display: flex;
+	flex-direction: column;
+}
+
+.FlexGrow {
+	flex-grow: 1;
+}
+
+.SelfEnd {
+	align-self: flex-end;
+}
+
+.SelfCenter {
+	align-self: center;
+}
+
+.JustifyCenter {
+	justify-content: center;
+}
+
+.center {
+	margin: 0px auto;
+}
+
+.ItemsCenter {
+    align-items: center;
+}
+
+.bottomMargin {
+    margin-bottom: 10px;
+}
+
+/* #############################################################################
+######################### GLOBAL RULES #########################################
+################################################################################ */
+.title {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bold;
+    filter: drop-shadow(0 0 .25rem white);
+}
+
+h1 {
+   text-align: center; 
+}
+
+h2 {
+    text-align: center;
+    font-family: syllabicsFont;
+}
+
+.subTitle{
+    font-family: syllabicsFont;
+    position: absolute;
+    font-size: 2rem;
+    bottom: 5%;
+    right: 5px;
+}
+
+.heroImage {
+    max-height: 350px;
+}
+
+.heroImageContainer {
+    position: relative;
+}
+
+.stage {
+    width: 95%;
+    background-color: white;
+    border: 5px solid rgb(117,198,217);
+    padding: 10px;
+}
+
+.mainNavBar{
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgb(117, 198, 217);
+}
+
+a { 
+    text-decoration: none;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.lineSpace {
+    line-height: 1.6rem;
+}
+
+a:hover {
+	text-decoration: line-through;
+	background-color: rgb(206, 210, 214);
+}
+
+.mainNavBar ul li{
+    margin: 0px 50px;
+    list-style: none;
+    justify-content: center;
+    text-shadow: white;
+}
+
+.mainNavBar li a {
+	color: rgba(255, 255, 255,0.8);
+}
+
+
+@media (width >= 1200px ){
+    .heroImage{
+        max-height: 500px;
+    }
+    .in_neonoodinImage{
+        width: 500px;
+        height: 500px;
+    }
+    .stage{
+        width: 60%;
+    }
+}
+
+footer{
+    clear: both;
+}
+
+.footerNavBar{
+    background-color:rgb(117, 198, 217);
+}
+
+.footerNavBar ul li {
+    list-style: none;
+    margin: 0px 5px;
+    font-size: small;
+}
+
+
+
+
+/* #############################################################################
+######################### INDEX HTML RULES #####################################
+################################################################################ */
+.in_neonoodinImage {
+    float: right;
+    width: 350px;
+    height: 350px;
+    margin-left: 20px;
+}
+
+.in_neonoodinImage img {
+    width: 95%;
+    height: 95%;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+
+.in_visionSection {
+    padding-left: 50px;
+}
+
+@media (width >= 1200px ){
+    .in_neonoodinImage{
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
+
+/* #############################################################################
+######################### ABOUT HTML RULES######################################
+################################################################################ */
+
+.ab_fourwinds {
+    font-size: large; 
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.ab_niinimoshenhImage {
+    height: 400px;
+    width: 400px
+}
+
+.ab_niinimoshenhImage img {
+    width: 100%;
+    height: 100%;
+}
+
+/* #############################################################################
+######################### CONTACT HTML RULES ###################################
+################################################################################ */
+
+.co_contactImage {
+    height: 200px;
+    width: 200px;
+    margin: 30px auto;
+}
+
+.co_contactImage img{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 1rem rgb(117, 198, 217));
+    border-radius: 9999px;
+}
+
+.co_form {
+    margin: 0px auto;
+    width: 60%;
+    max-width: 700px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border: 5px solid rgb(117,198,217);
+    padding-right: 20px;
+}
+
+.co_form label {
+    min-width: 5rem;
+}
+
+.co_formButtons {
+    width:fit-content;
+    margin: 0px auto;
+    margin-bottom: 10px;
+}
+
+.co_formError {
+    color: red;
+}
+
+
